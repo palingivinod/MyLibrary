@@ -1,8 +1,14 @@
-<project>
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.vinnu</groupId>
-  <artifactId>mylibrary</artifactId>
-  <version>1.0.0</version>
-  <name>mylibrary</name>
-  <dependencies></dependencies>
-</project>
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.github.palingivinod</groupId>
+        <artifactId>MyLibrary</artifactId>
+        <version>v1.0.0</version>
+    </dependency>
+</dependencies>
