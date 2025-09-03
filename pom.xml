@@ -1,0 +1,8 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.vinnu</groupId>
+  <artifactId>mylibrary</artifactId>
+  <version>1.0.0</version>
+  <name>mylibrary</name>
+  <dependencies></dependencies>
+</project>
