@@ -71,6 +71,7 @@ public class Msg {
         printFancy(message, CYAN, BOLD);
     }
 
+    //Helper method to repeat a string multiple times
     private static String repeat(String s, int count) {
     StringBuilder sb = new StringBuilder();
     for (int i = 0; i < count; i++) {
