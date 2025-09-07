@@ -1,17 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Change this to your GitHub username/repo -->
-    <groupId>com.github.palingivinod</groupId>
-    <artifactId>MyLibrary</artifactId>
+    <groupId>com.vinnu</groupId>
+    <artifactId>mylibrary</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>MyLibrary</name>
-    <description>A simple custom Java library with Msg class</description>
+    <name>mylibrary</name>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -19,8 +16,8 @@
     </properties>
 
     <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
-            <!-- Ensures JAR is created properly -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -28,20 +25,6 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>mylibrary.Msg</mainClass>
-                        </manifest>
-                    </archive>
                 </configuration>
             </plugin>
         </plugins>
