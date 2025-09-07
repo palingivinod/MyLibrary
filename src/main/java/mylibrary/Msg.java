@@ -70,6 +70,17 @@ public class Msg {
     public static void info(Object message) {
         printFancy(message, CYAN, BOLD);
     }
+
+    public static void progress(int current, int total) {
+    int percent = (int) ((current * 100.0) / total);
+    int bars = percent / 5; // 20 bars total
+    String bar = "[" + "█".repeat(bars) + "-".repeat(20 - bars) + "] " + percent + "%";
+    System.out.print("\r" + bar); // \r overwrites same line
+    if (current == total) {
+        System.out.println(); // move to new line when done
+    }
+}
+
     
     
    
