@@ -1,7 +1,7 @@
 package TermiX;
 
 public class Table {
-    public static void table(String[] headers, String[][] rows) {
+    public static void print(String[] headers, String[][] rows) {
         int columns = headers.length;
         int[] columnWidths = new int[columns];
 
