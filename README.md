@@ -96,7 +96,7 @@ String[][] rows = {
     {"3", "Charlie", "92"}
 };
 
-Table.table(headers, rows);
+Table.print(headers, rows);
 ```
 
 ### Output
