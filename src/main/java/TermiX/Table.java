@@ -1,40 +1,58 @@
 package TermiX;
 
-import java.util.List;
-
 public class Table {
+    public static void table(String[] headers, String[][] rows) {
+        int columns = headers.length;
+        int[] columnWidths = new int[columns];
 
-    public static void print(String[] headers, List<String[]> rows) {
-        int[] columnWidths = new int[headers.length];
-
-       //calculating maximum length for each column
-        for (int i = 0; i < headers.length; i++) {
+        // 1. Find max width of each column
+        for (int i = 0; i < columns; i++) {
             columnWidths[i] = headers[i].length();
         }
         for (String[] row : rows) {
-            for (int i = 0; i < row.length; i++) {
-                columnWidths[i] = Math.max(columnWidths[i], row[i].length());
+            for (int i = 0; i < columns; i++) {
+                if (row[i].length() > columnWidths[i]) {
+                    columnWidths[i] = row[i].length();
+                }
             }
         }
 
-        // Print headers
-        for (int i = 0; i < headers.length; i++) {
-            System.out.printf("%-" + (columnWidths[i] + 2) + "s", headers[i]);
+        // 2. Function to build separator
+        String buildSeparator = "+" + repeat("-", columnWidths[0] + 2);
+        for (int i = 1; i < columns; i++) {
+            buildSeparator += "+" + repeat("-", columnWidths[i] + 2);
         }
-        System.out.println();
+        buildSeparator += "+";
 
-        // Print separator
-        for (int width : columnWidths) {
-            System.out.print("-".repeat(width + 2));
+        // 3. Print table
+        System.out.println(buildSeparator);
+
+        // Print headers
+        System.out.print("|");
+        for (int i = 0; i < columns; i++) {
+            System.out.printf(" %-" + columnWidths[i] + "s |", headers[i]);
         }
         System.out.println();
+        System.out.println(buildSeparator);
 
         // Print rows
         for (String[] row : rows) {
-            for (int i = 0; i < row.length; i++) {
-                System.out.printf("%-" + (columnWidths[i] + 2) + "s", row[i]);
+            System.out.print("|");
+            for (int i = 0; i < columns; i++) {
+                System.out.printf(" %-" + columnWidths[i] + "s |", row[i]);
             }
             System.out.println();
         }
+
+        System.out.println(buildSeparator);
+    }
+
+    // helper function for Java 8 (instead of String.repeat)
+    private static String repeat(String s, int count) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < count; i++) {
+            sb.append(s);
+        }
+        return sb.toString();
     }
 }
