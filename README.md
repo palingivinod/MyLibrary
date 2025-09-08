@@ -110,5 +110,7 @@ Table.table(headers, rows);
 | 3  | Charlie | 92    |
 +----+---------+-------+
 ```
-
+## Liscence
 This project is open-source and free to use.
+
+[![](https://jitpack.io/v/palingivinod/TermiX.svg)](https://jitpack.io/#palingivinod/TermiX)
