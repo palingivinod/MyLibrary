@@ -1,1 +1,1 @@
-[![](https://jitpack.io/v/palingivinod/MyLibrary.svg)](https://jitpack.io/#palingivinod/MyLibrary)
+[![](https://jitpack.io/v/palingivinod/TermiX.svg)](https://jitpack.io/#palingivinod/TermiX)
