@@ -3,16 +3,27 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.vinnu</groupId>
-    <artifactId>mylibrary</artifactId>
-    <version>1.0.0</version>
+    <!-- GitHub username + repo name for JitPack -->
+    <groupId>com.github.palingivinod</groupId>
+    <artifactId>TermiX</artifactId>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
-    <name>mylibrary</name>
+    <name>TermiX</name>
+    <description>Java console utilities for colored messages, progress bars, tables, and more</description>
+    <url>https://github.com/palingivinod/TermiX</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>

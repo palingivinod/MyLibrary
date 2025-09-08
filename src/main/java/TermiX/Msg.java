@@ -1,4 +1,4 @@
-package mylibrary;
+package TermiX;
 
 public class Msg {
 
@@ -38,8 +38,8 @@ public class Msg {
     public static void println(Object message) {
         System.out.println(message);
     }
-    
-    public static void println(){
+
+    public static void println() {
         System.out.println();
     }
 
@@ -71,25 +71,22 @@ public class Msg {
         printFancy(message, CYAN, BOLD);
     }
 
-    //Helper method to repeat a string multiple times
+    // Helper method to repeat a string multiple times
     private static String repeat(String s, int count) {
-    StringBuilder sb = new StringBuilder();
-    for (int i = 0; i < count; i++) {
-        sb.append(s);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < count; i++) {
+            sb.append(s);
+        }
+        return sb.toString();
     }
-    return sb.toString();
-}
 
-
-  public static void progress(int current, int total) {
-    int percent = (int) ((current * 100.0) / total);
-    int bars = percent / 5; // 20 bars total
-    String bar = "[" + repeat("█", bars) + repeat("-", 20 - bars) + "] " + percent + "%";
-    System.out.print("\r" + bar); // \r overwrites same line
-    if (current == total) {
-        System.out.println(); // move to new line when done
+    public static void progress(int current, int total) {
+        int percent = (int) ((current * 100.0) / total);
+        int bars = percent / 5; // 20 bars total
+        String bar = "[" + repeat("█", bars) + repeat("-", 20 - bars) + "] " + percent + "%";
+        System.out.print("\r" + bar); // \r overwrites same line
+        if (current == total) {
+            System.out.println(); // move to new line when done
+        }
     }
-}
-
-   
 }
